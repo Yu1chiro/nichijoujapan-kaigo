@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Panel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Filament\Panel; 
 
-class User extends Authenticatable
+// 2. Tambahkan "implements FilamentUser"
+class User extends Authenticatable implements FilamentUser
 {
     use HasFactory, Notifiable;
 
@@ -31,8 +33,11 @@ class User extends Authenticatable
         ];
     }
 
+    // 3. Fungsi untuk akses panel di Production
     public function canAccessPanel(Panel $panel): bool
     {
-           return $this->email === 'nichijoujapanid@gmail.com';
+        return $this->email === 'nichijoujapanid@gmail.com';
+        
+      
     }
 }
