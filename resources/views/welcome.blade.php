@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaigo CBT - Platform Belajar</title>
+    <title>Nichijou Japan ID </title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap"
         rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -54,21 +54,20 @@
 
     <nav class="bg-white/80 backdrop-blur-md border-b border-stone-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between h-16 items-center">
-            <span class="text-xl font-bold text-stone-800 tracking-widest uppercase">KAIGO<span
-                    class="text-stone-400">SHIKEN</span></span>
+            <span class="text-xl font-bold text-stone-800 tracking-widest uppercase">NICHIJOU JAPAN ID <span
+                    class="text-stone-400">CONTEXTUAL TEST</span></span>
             <div class="flex items-center space-x-6">
                 <a href="{{ route('dashboard') }}"
-                    class="text-xs font-bold text-stone-500 hover:text-stone-800 uppercase tracking-widest transition-colors">Dashboard</a>
-                <a href="/admin"
-                    class="bg-stone-800 text-white px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-widest hover:bg-stone-700 transition-all">Admin</a>
+                    class="text-xs font-bold text-stone-500 hover:text-stone-800 uppercase tracking-widest transition-colors">Student
+                    Dashboard</a>
             </div>
         </div>
     </nav>
 
     <main class="max-w-7xl mx-auto px-6 py-16">
         <header class="text-center mb-12">
-            <h1 class="text-3xl font-bold text-stone-800 tracking-tight">Pilih Deck Belajar Anda</h1>
-            <p class="text-stone-400 text-sm mt-3 font-medium">Filter materi berdasarkan bidang keahlian Anda.</p>
+            <h1 class="text-3xl font-bold text-stone-800 tracking-tight">Pilih Deck Belajar Kamu</h1>
+            <p class="text-stone-400 text-sm mt-3 font-medium">Filter materi berdasarkan contextual </p>
         </header>
 
         <div class="flex flex-wrap justify-center gap-3 mb-16">
@@ -103,7 +102,7 @@
 
                         <a :href="'/shiken/' + deck.id"
                             class="block text-center bg-stone-800 text-white font-bold py-4 rounded-xl text-xs uppercase tracking-[0.2em] hover:bg-stone-700 shadow-md shadow-stone-200 transition-all">
-                            Tryout Sekarang
+                            Mulai Sekarang
                         </a>
                     </div>
                 </div>
@@ -128,7 +127,7 @@
     </main>
 
     <footer class="py-12 text-center text-stone-300 text-[10px] font-bold uppercase tracking-[0.3em]">
-        &mdash; Kaigo Shiken CBT Platform &mdash;
+        &mdash; Contextual Learning Platform &mdash;
     </footer>
 </body>
 

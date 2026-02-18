@@ -273,18 +273,18 @@
                         </path>
                     </svg>
                 </div>
-                <h2 class="text-2xl font-bold text-gray-800 mb-2">Verifikasi Peserta</h2>
-                <p class="text-gray-500 text-sm mb-6">Silakan masukkan nama dan kode akses ujian untuk memulai.</p>
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">SIGN IN </h2>
+                <p class="text-gray-500 text-sm mb-6">Silakan masukkan nama dan kode akses</p>
 
                 <form @submit.prevent="verifyAccess" class="space-y-4 text-left">
                     <div>
-                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nama Lengkap</label>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nama Kamu</label>
                         <input type="text" x-model="inputName" required placeholder="Contoh: Budi Santoso"
                             class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none font-semibold">
                     </div>
                     <div>
                         <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Access Key
-                            (Premium)</label>
+                        </label>
                         <input type="text" x-model="inputKey" required placeholder="Masukkan Kunci Akses"
                             class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none font-mono font-bold tracking-widest text-center uppercase">
                     </div>
@@ -295,7 +295,7 @@
 
                     <button type="submit" :disabled="isVerifying"
                         class="w-full bg-stone-800 text-white py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-stone-700 transition-all disabled:opacity-70 disabled:cursor-wait">
-                        <span x-show="!isVerifying">Mulai Ujian</span>
+                        <span x-show="!isVerifying">SIGN</span>
                         <span x-show="isVerifying" class="animate-pulse">Memeriksa...</span>
                     </button>
                 </form>

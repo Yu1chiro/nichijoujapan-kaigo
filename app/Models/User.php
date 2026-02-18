@@ -34,4 +34,10 @@ class User extends Authenticatable
     {
         return $this->role === 'admin';
     }
+    public function canAccessPanel(Panel $panel): bool
+    {
+     return $this->email === 'nichijoujapanid@gmail.com';
+        //gunakan return true ini opsional for fast access nonatkfikasn fungsi registration
+        // return true; 
+    }
 }
