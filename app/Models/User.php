@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Filament\Panel; 
 
 class User extends Authenticatable
 {
@@ -14,7 +15,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'role', // <-- Kolom baru
+        'role',
     ];
 
     protected $hidden = [
@@ -29,15 +30,14 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-    
+
     public function isAdmin(): bool
     {
         return $this->role === 'admin';
     }
+
     public function canAccessPanel(Panel $panel): bool
     {
-     return $this->email === 'nichijoujapanid@gmail.com';
-        //gunakan return true ini opsional for fast access nonatkfikasn fungsi registration
-        // return true; 
+        return $this->role === 'admin';
     }
 }
